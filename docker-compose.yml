@@ -1,7 +1,6 @@
 version: "3.5"
 services:
   beacon-chain:
-    image: "beacon-chain.lodestar-ephemery.dnp.dappnode.eth:0.1.0"
     build:
       context: beacon-chain
       args:
@@ -9,8 +8,8 @@ services:
     volumes:
       - "beacon-data:/var/lib/data"
     ports:
-      - "19012:19012/tcp"
-      - "19012:19012/udp"
+      - "9612:9612/tcp"
+      - "9612:9612/udp"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
@@ -18,12 +17,11 @@ services:
       DEBUG_LEVEL: info
       BEACON_API_PORT: 3500
       CHECKPOINT_SYNC_URL: ""
-      P2P_PORT: 19012
+      P2P_PORT: 9612
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
-      MEMORY_LIMIT: 4096
+      MEMORY_LIMIT: 8192
   validator:
-    image: "validator.lodestar-gnosis.dnp.dappnode.eth:0.1.0"
     build:
       context: validator
       args:
@@ -40,7 +38,7 @@ services:
       GRAFFITI: validating_from_DAppNode
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
-      DOPPELGANGER_PROTECTION: "true"
+      DOPPELGANGER_PROTECTION: "false"
 volumes:
   beacon-data: {}
   validator-data: {}

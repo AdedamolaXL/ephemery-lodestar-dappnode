@@ -5,17 +5,22 @@
   "architectures": ["linux/amd64", "linux/arm64"],
   "upstreamRepo": "Chainsafe/lodestar",
   "upstreamArg": "UPSTREAM_VERSION",
-  "shortDescription": "Lodestar consensus client for Holesky network",
-  "description": "Lodestar consensus client for Holesky network",
+  "shortDescription": "Lodestar consensus client for Ephemery network",
+  "description": "Lodestar consensus client for Ephemery network",
   "type": "service",
   "author": "cyberroninn",
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
     "type": "git",
-    "url":  ""
+    "url":  "https://github.com/AdedamolaXL/ephemery-lodestar-dappnode"
+  },
+  "bugs": {
+    "url": "https://github.com/AdedamolaXL/ephemery-lodestar-dappnode/issues"
   },
   "links": {
-    "homepage": "https://your-project-homepage-or-docs.io"
+    "homepage": "https://ephemery.dev/",
+    "docs": "https://github.com/ephemery-testnet/ephemery-resources",
+    "readme": "https://github.com/ephemery-testnet/ephemery-resources#readme"
   },
   "license": "GPL-3.0",
   "chain": {
