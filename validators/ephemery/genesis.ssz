@@ -1,0 +1,3 @@
+#!/bin/bash
+source <(curl -s "https://ephemery.dev/latest/genesis.ssz")
+echo "genesisFileUrl: $genesisFileUrl"
